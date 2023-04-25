@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lanchonete RIcardo Milos</title>
+
+    <!--By Incx / Feito por Incx-->
+
+</head>
+
+<body>
+
+    <h1>Compre seus Doces e Salgados aqui!</h1>
+
+    <br>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Quantidade</legend>
+
+            <div>
+
+                <label for="hrT">Quantidade de doces</label>
+
+                <br/>
+
+                <input type="text" id="qdd" />
+
+            </div>
+
+            <div>
+
+                <label for="Vhr">Quantidade de salgados</label>
+
+                <br/>
+
+                <input type="text" id="qds" />
+
+            </div>
+
+            <input type="button" value="Ir para proxima etapa" onclick="calcular()"/>
+
+        <script type="text/javascript">
+
+            function calcular(){
+
+            var doces = document.getElementById('qdd').value;
+
+            var salgados = document.getElementById('qds').value;
+
+            var preco_doces = parseFloat(1.25);
+
+            var preco_salgados = parseFloat(0.75);
+
+            var valor_doces = parseInt(doces) * preco_doces;
+
+            var valor_salgados = parseInt(salgados) * preco_salgados;
+
+            var valor_total = valor_doces + valor_salgados;
+
+            alert('você terá que pagar R$' + valor_total + ', você pediu ' + doces
+
+             + ' doces,' +' que no total deram R$' + valor_doces + ' e tabém pediu '
+
+             + salgados + ' salgados, ' + 'que no total deram R$' + valor_salgados)
+
+            }
+
+        </script>
+
+        <style>
+
+            body {
+
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+        </style>
+
+    </form>
+
+</body>
+
+</html>
